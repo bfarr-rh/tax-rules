@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="google-site-verification" content="unax-poTqfKLTwShUyhuXvT1Yxt8IlqPwD0dAQ7oq4c" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Complete a Digital Duties Form | State Revenue Office</title>
+
+  <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="rules.js"></script>
+  <script>
+    $(function () {
+      $('#step1_TechnicalDetails').hide();
+      $('#step2_TechnicalDetails').hide();
+      $("#tabs").tabs();
+    });
+  </script>
+
+
+</head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-5912 node-type-task">
+  <div class="page-header">
+    <h1>Example Form to drive Decision Manager</h1>
+  </div>
+  <main id="main" role="main" accesskey="S">
+    <div class="container " id="two-columns">
+      <div class="row">
+
+      <div class="region region-content">
+        <section id="block-system-main" class="block block-system clearfix">
+
+          <div id="tabs">
+            <ul>
+              <li><a href="#tabs-1">Setup</a></li>
+              <li><a href="#tabs-2">Knockout Rule</a></li>
+            </ul>
+            <div id="tabs-1">
+              <p>To run this page you may need to enable CORS for the kie server
+                https://access.redhat.com/solutions/4036301 </p>
+
+              <div><label>Version of Knockout Rule Service {containerId} will be replaced in urls: </label>
+                <input id="containerid" type="text" size="50" value="KnockoutRulesExample_1.1.1" />
+              </div>
+              <div style="margin-top:5px"><label>User name KIE Rest API :</label>
+                <input id="username1" type="text" size="50" value="rhdmAdmin" />
+              </div>
+              <div style="margin-top:5px"><label>Password:</label>
+                <input id="password1" type="text" size="50" value="Password1!" />
+              </div>
+            </div>
+            <div id="tabs-2">
+              <div><label>Property Details:</label>
+                <select id="propertyDetailsSelect" name="propertyDetails">
+                  <option value=""></option>
+                  <option value="Change in beneficial ownership">Change in beneficial ownership</option>
+                  <option value="Transfer of land use entitlement">Transfer of land use entitlement</option>
+                  <option value="Transfer of Land">Transfer of Land</option>
+                </select>
+              </div>
+              <div><label>Transaction Details:</label>
+                <select id="transactionDetailsSelect" name="transactionDetails">
+                  <option value=""></option>
+                  <option value="Devise in accordance with a will or probate">Devise in accordance with a will or
+                    probate</option>
+                  <option value="Other">Other</option>
+                  <option value="Change in the manner of holding in equal shares">Change in the manner of holding in
+                    equal shares</option>
+                  <option value="Transfer between spouses, defacto or domestic partner">Transfer between spouses,
+                    defacto or domestic partner</option>
+                </select>
+              </div>
+              <div><label>Concession Type:</label>
+                <select id="concessionTypeSelect" name="concessionType">
+                  <option value=""></option>
+                  <option value="Conversion of land use entitlement">Conversion of land use entitlement</option>
+                  <option value="Shariah financing">Shariah financing</option>
+                  <option value="Young Farmer exemption of concession">Young Farmer exemption of concession</option>
+                  <option value="Change in manner of holding">Change in manner of holding</option>
+                  <option value="Transfer between spouses or domestic Partner - Love and affection">Transfer between spouses or domestic Partner - Love and affection</option>
+                  <option value="Transfer between spouses or domestic Partner - breakdown of relationship">Transfer between spouses or domestic Partner - breakdown of relationship</option>
+                </select>
+              </div>
+              <div><label>Number of Transferees:</label>
+                <input id="transfereesInput" name="transferees" value="" size="3" maxlength="2" />
+
+              </div>
+              <br />
+              <div>
+                <button style="clear: both; float: right;" id="step1_button" class="webform-submit button-primary btn btn-primary form-submit">Submit</button>
+              </div>
+              <br />
+              <div>
+                  <br/>
+                <label>Result:</label>
+                <span id="step1_result"></span>
+                <br/>
+              </div>
+              <div>
+                  <button id="step1_showhidetechdetails">Details</button>
+              </div>
+              <div id="step1_TechnicalDetails" title="Technical Details">
+                <div><label>URL:</label>
+                  <input id="step1_url" type="text" size="60"
+                    value="http://localhost:8080/kie-server/services/rest/server/containers/instances/{containerId}" />
+                </div>
+                <div>
+                  <p><label>Payload sent</label></p>
+                  <p></p><textarea id="step1_json" rows="7" cols="60">
+                  </textarea></p>
+                    <p><label>Received</label></p>
+                    <p><textarea id="step1_jsonresult" rows="7" cols="60">
+                    </textarea></p>
+                  </div>
+                  <div>
+                      <p><label>Ruleflow Diagram</label></p>
+                      <p>
+                        <img src="images/KnockOutRules.bpmn.jpg" height="289" width="667"/>
+                      </p>
+                  </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        
+      </div>
+      </form>
+      </section>
+
+    </div>
+    </div>
+
+    </section>
+    </div>
+
+    </div>
+  </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_11FBB61F-CD61-406C-86A6-3E5B27C3FCCB" xmlns:included1="https://kiegroup.org/dmn/_6FD296A2-78DD-4222-9CFC-D5F08BC5F039" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_B64CEAE2-54B5-4BA5-95C4-838B518DCAD2" name="KnockOutTest4" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_11FBB61F-CD61-406C-86A6-3E5B27C3FCCB">
+  <dmn:extensionElements/>
+  <dmn:import id="_EEE5AC62-5CF2-47C9-A3B7-6F1EA2016F1A" name="model" namespace="https://kiegroup.org/dmn/_6FD296A2-78DD-4222-9CFC-D5F08BC5F039" locationURI="default://master@MySpace/SRO_Land_Tax/src/main/resources/org/kie/example/traffic/traffic_violation/dmnModels.dmn" importType="http://www.omg.org/spec/DMN/20180521/MODEL/"/>
+  <dmn:decision id="_00E8524C-229C-4196-820A-16447EF0FEED" name="Test4">
+    <dmn:variable id="_06CEB0E7-B77D-4D41-8F93-CB09DBB346A8" name="Test4" typeRef="string"/>
+    <dmn:informationRequirement id="_FE36EE69-AA71-4B07-8361-F04131014400">
+      <dmn:requiredInput href="#_472E743B-CEE2-4759-9466-B806EBBA3AEB"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_40755B80-D86B-4F1C-8CDA-41929E903786" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_D5C87D30-27D6-42A5-9168-90CB90CF019B">
+        <dmn:inputExpression id="_127C194F-1C63-4C81-A13C-D553F78B968E" typeRef="string">
+          <dmn:text>formData.concessionType</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_23EE122C-AC41-4708-8E92-8883C491EC4B">
+        <dmn:inputExpression id="_F50E76DE-2AA7-4FD7-BF8B-3668D5B47CBD" typeRef="number">
+          <dmn:text>formData.transferees</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_8E9775A0-6934-45BD-97F1-0A1A9FFA18FE"/>
+      <dmn:rule id="_D79B2FB2-8B96-4F9E-9579-816825C8C3A7">
+        <dmn:description>Table 1</dmn:description>
+        <dmn:inputEntry id="_9427F8A5-E4A5-443D-9EB5-35B0EB15829A">
+          <dmn:text>"Transfer between spouses or domestic Partner - Love and affection"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_74416BAA-E009-4EF6-8EFE-12B09189F657">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_B4F20C12-E21F-434C-A230-786AE7BDA75A">
+          <dmn:text>"Spousal Transfer"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_3A04BF18-755D-4C92-8E8C-8775739AF8F0">
+        <dmn:description>Table 1</dmn:description>
+        <dmn:inputEntry id="_60A88027-DCE9-45DF-9A7F-3D08BABD1E1D">
+          <dmn:text>"Transfer between spouses or domestic Partner - breakdown of relationship"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_095D392F-96EB-4836-8493-0219C5344AB5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_AC312769-F19F-4D47-AA2C-093966164BCD">
+          <dmn:text>"Spousal Transfer"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_4D5C5E55-F9B1-4079-8071-E2DAE35C137C">
+        <dmn:description>Table 2</dmn:description>
+        <dmn:inputEntry id="_80C15F6E-C72F-4110-B6E6-164C3C256A05">
+          <dmn:text>"Change in manner of holding"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CBB332D1-9881-4A3A-A0C4-135E02BB9A0A">
+          <dmn:text>&gt;2</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_24E5917C-46F1-4223-BD00-07284971133F">
+          <dmn:text>"Change in Manner of holding - more than two parties"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:inputData id="_472E743B-CEE2-4759-9466-B806EBBA3AEB" name="formData">
+    <dmn:variable id="_7B25877E-5871-4598-AE34-DDF47D8A161A" name="formData" typeRef="model.formData"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_40755B80-D86B-4F1C-8CDA-41929E903786">
+            <kie:width>50.0</kie:width>
+            <kie:width>564.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>523.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-_00E8524C-229C-4196-820A-16447EF0FEED" dmnElementRef="_00E8524C-229C-4196-820A-16447EF0FEED" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="182" y="196" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_472E743B-CEE2-4759-9466-B806EBBA3AEB" dmnElementRef="_472E743B-CEE2-4759-9466-B806EBBA3AEB" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="409" y="36" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_FE36EE69-AA71-4B07-8361-F04131014400" dmnElementRef="_FE36EE69-AA71-4B07-8361-F04131014400">
+        <di:waypoint x="459" y="86"/>
+        <di:waypoint x="232" y="196"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>

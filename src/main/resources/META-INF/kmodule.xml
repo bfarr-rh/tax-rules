@@ -1,0 +1,10 @@
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <kbase name="myKBase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
+    <ksession name="myStatelessSession" type="stateless" default="true" clockType="realtime"/>
+    <ksession name="myStatefulSession" type="stateful" default="false" clockType="realtime">
+      <listeners>
+        <ruleRuntimeEventListener type="org.kie.api.event.rule.DebugRuleRuntimeEventListener"/>
+      </listeners>
+    </ksession>
+  </kbase>
+</kmodule>
