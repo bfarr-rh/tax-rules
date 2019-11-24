@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>landtaxrules</groupId>
-  <artifactId>KnockoutRulesExample</artifactId>
+  <artifactId>TaxRules</artifactId>
   <version>1.1.1</version>
   <packaging>kjar</packaging>
-  <name>KnockoutRulesExample</name>
+  <name>TaxRules</name>
   <description>An example of knockout rules for a Land Tax Demo</description>
   <dependencies>
     <dependency>
