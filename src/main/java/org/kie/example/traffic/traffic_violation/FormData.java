@@ -17,9 +17,6 @@ public class FormData implements java.io.Serializable {
 	public FormData() {
 	}
 
-	public String toString() {
-		return this.propertyDetails;
-	}
 
 	public java.lang.String getTransactionType() {
 		return this.transactionType;
