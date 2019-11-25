@@ -8,71 +8,48 @@ public class FormData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	private java.lang.String propertyDetails;
+	private java.lang.String transactionType;
 
-	private java.lang.String result;
+	private java.lang.Integer purchasePrice;
 
-	private java.lang.String transactionDetails;
-
-	private java.lang.String concessionType;
-
-	private java.lang.Integer transferees;
+	private java.lang.String purchaserType;
 
 	public FormData() {
-	}
-
-	public java.lang.String getPropertyDetails() {
-		return this.propertyDetails;
-	}
-
-	public void setPropertyDetails(java.lang.String propertyDetails) {
-		this.propertyDetails = propertyDetails;
 	}
 
 	public String toString() {
 		return this.propertyDetails;
 	}
 
-	public java.lang.String getResult() {
-		return this.result;
+	public java.lang.String getTransactionType() {
+		return this.transactionType;
 	}
 
-	public void setResult(java.lang.String result) {
-		this.result = result;
+	public void setTransactionType(java.lang.String transactionType) {
+		this.transactionType = transactionType;
 	}
 
-	public java.lang.String getTransactionDetails() {
-		return this.transactionDetails;
+	public java.lang.Integer getPurchasePrice() {
+		return this.purchasePrice;
 	}
 
-	public void setTransactionDetails(java.lang.String transactionDetails) {
-		this.transactionDetails = transactionDetails;
+	public void setPurchasePrice(java.lang.Integer purchasePrice) {
+		this.purchasePrice = purchasePrice;
 	}
 
-	public java.lang.String getConcessionType() {
-		return this.concessionType;
+	public java.lang.String getPurchaserType() {
+		return this.purchaserType;
 	}
 
-	public void setConcessionType(java.lang.String concessionType) {
-		this.concessionType = concessionType;
+	public void setPurchaserType(java.lang.String purchaserType) {
+		this.purchaserType = purchaserType;
 	}
 
-	public java.lang.Integer getTransferees() {
-		return this.transferees;
-	}
-
-	public void setTransferees(java.lang.Integer transferees) {
-		this.transferees = transferees;
-	}
-
-	public FormData(java.lang.String propertyDetails, java.lang.String result,
-			java.lang.String transactionDetails,
-			java.lang.String concessionType, java.lang.Integer transferees) {
-		this.propertyDetails = propertyDetails;
-		this.result = result;
-		this.transactionDetails = transactionDetails;
-		this.concessionType = concessionType;
-		this.transferees = transferees;
+	public FormData(java.lang.String transactionType,
+			java.lang.Integer purchasePrice, java.lang.String purchaserType) {
+		this.transactionType = transactionType;
+		this.purchasePrice = purchasePrice;
+		this.purchaserType = purchaserType;
 	}
 
 }
