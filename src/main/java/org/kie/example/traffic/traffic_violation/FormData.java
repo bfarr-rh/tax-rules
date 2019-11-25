@@ -14,9 +14,10 @@ public class FormData implements java.io.Serializable {
 
 	private java.lang.String purchaserType;
 
+	private java.lang.String result;
+
 	public FormData() {
 	}
-
 
 	public java.lang.String getTransactionType() {
 		return this.transactionType;
@@ -42,11 +43,21 @@ public class FormData implements java.io.Serializable {
 		this.purchaserType = purchaserType;
 	}
 
+	public java.lang.String getResult() {
+		return this.result;
+	}
+
+	public void setResult(java.lang.String result) {
+		this.result = result;
+	}
+
 	public FormData(java.lang.String transactionType,
-			java.lang.Integer purchasePrice, java.lang.String purchaserType) {
+			java.lang.Integer purchasePrice, java.lang.String purchaserType,
+			java.lang.String result) {
 		this.transactionType = transactionType;
 		this.purchasePrice = purchasePrice;
 		this.purchaserType = purchaserType;
+		this.result = result;
 	}
 
 }
