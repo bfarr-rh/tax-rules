@@ -9,8 +9,8 @@
     </dmn:informationRequirement>
     <dmn:decisionTable id="_40755B80-D86B-4F1C-8CDA-41929E903786" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_D5C87D30-27D6-42A5-9168-90CB90CF019B">
-        <dmn:inputExpression id="_127C194F-1C63-4C81-A13C-D553F78B968E" typeRef="string">
-          <dmn:text>formData.concessionType</dmn:text>
+        <dmn:inputExpression id="_127C194F-1C63-4C81-A13C-D553F78B968E" typeRef="number">
+          <dmn:text>formData.purchasePrice</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_8E9775A0-6934-45BD-97F1-0A1A9FFA18FE"/>
