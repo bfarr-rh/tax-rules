@@ -10,7 +10,7 @@
     <dmn:decisionTable id="_40755B80-D86B-4F1C-8CDA-41929E903786" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_23EE122C-AC41-4708-8E92-8883C491EC4B">
         <dmn:inputExpression id="_F50E76DE-2AA7-4FD7-BF8B-3668D5B47CBD" typeRef="string">
-          <dmn:text>formData.transactionDetails</dmn:text>
+          <dmn:text>formData.transactionType</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_8E9775A0-6934-45BD-97F1-0A1A9FFA18FE"/>
@@ -20,31 +20,23 @@
           <dmn:text>"Transfer between spouses, defacto or domestic partner"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_B4F20C12-E21F-434C-A230-786AE7BDA75A">
-          <dmn:text>"Test4"</dmn:text>
+          <dmn:text>"0"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_3A04BF18-755D-4C92-8E8C-8775739AF8F0">
         <dmn:inputEntry id="_095D392F-96EB-4836-8493-0219C5344AB5">
-          <dmn:text>"Change in the manner of holding in equal shares"</dmn:text>
+          <dmn:text>"Principal Place of Residence"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AC312769-F19F-4D47-AA2C-093966164BCD">
-          <dmn:text>"Test4"</dmn:text>
+          <dmn:text>"1"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_133AFF0C-5A58-4E41-A0BD-1C8F4BFAAF43">
         <dmn:description>Deceased estate transfers</dmn:description>
         <dmn:inputEntry id="_038E98B8-F5AB-435A-BF18-BC10CB275C02">
-          <dmn:text>"Devise in accordance with a will or probate"</dmn:text>
+          <dmn:text>"Investment"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AFA48E82-4052-4D39-BDE4-3B155AA8A9B6">
-          <dmn:text>"ELNO Lodgement"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule id="_4D5C5E55-F9B1-4079-8071-E2DAE35C137C">
-        <dmn:inputEntry id="_CBB332D1-9881-4A3A-A0C4-135E02BB9A0A">
-          <dmn:text>"Other"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_24E5917C-46F1-4223-BD00-07284971133F">
           <dmn:text>"Test3"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
