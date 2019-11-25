@@ -15,39 +15,19 @@
       </dmn:input>
       <dmn:output id="_8E9775A0-6934-45BD-97F1-0A1A9FFA18FE"/>
       <dmn:rule id="_D79B2FB2-8B96-4F9E-9579-816825C8C3A7">
-        <dmn:description>Restricted lodgement</dmn:description>
         <dmn:inputEntry id="_9427F8A5-E4A5-443D-9EB5-35B0EB15829A">
-          <dmn:text>"Conversion of land use entitlement"</dmn:text>
+          <dmn:text>0..500000</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_B4F20C12-E21F-434C-A230-786AE7BDA75A">
-          <dmn:text>"ELM"</dmn:text>
+          <dmn:text>"2"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_3A04BF18-755D-4C92-8E8C-8775739AF8F0">
-        <dmn:description>Restricted lodgement</dmn:description>
         <dmn:inputEntry id="_60A88027-DCE9-45DF-9A7F-3D08BABD1E1D">
-          <dmn:text>"Shariah financing"</dmn:text>
+          <dmn:text>&gt; 500000</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AC312769-F19F-4D47-AA2C-093966164BCD">
-          <dmn:text>"ELM"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule id="_4D5C5E55-F9B1-4079-8071-E2DAE35C137C">
-        <dmn:description>go to test 4</dmn:description>
-        <dmn:inputEntry id="_80C15F6E-C72F-4110-B6E6-164C3C256A05">
-          <dmn:text>"Change in manner of holding"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_24E5917C-46F1-4223-BD00-07284971133F">
-          <dmn:text>"Test4"</dmn:text>
-        </dmn:outputEntry>
-      </dmn:rule>
-      <dmn:rule id="_E39B492A-1B8D-4BC4-AE54-06AFE0288EDD">
-        <dmn:description>Young farmers exemption table 12</dmn:description>
-        <dmn:inputEntry id="_0E86B6E4-0196-47B0-B6AE-6DAD2BFDDD15">
-          <dmn:text>"Young Farmer exemption of concession"</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_1957C813-FBB0-4B1A-B65C-B365C9C66EA7">
-          <dmn:text>"Primary Production Land"</dmn:text>
+          <dmn:text>"3"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
     </dmn:decisionTable>
