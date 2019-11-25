@@ -14,33 +14,33 @@
     <dmn:decisionTable id="_40755B80-D86B-4F1C-8CDA-41929E903786" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_B0DB9B23-C6F9-4DBB-AA91-4B4734598613">
         <dmn:inputExpression id="_3F490902-1495-4F83-B011-C4D3C5148CE3" typeRef="string">
-          <dmn:text>formData.propertyDetails</dmn:text>
+          <dmn:text>formData.purchaserType</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_8E9775A0-6934-45BD-97F1-0A1A9FFA18FE"/>
       <dmn:rule id="_D79B2FB2-8B96-4F9E-9579-816825C8C3A7">
+        <dmn:description>Refer to next table for determination of transaction type</dmn:description>
         <dmn:inputEntry id="_2EFC52D1-B4F8-42CD-96F0-3E7BEFEDF868">
-          <dmn:text>"Change in beneficial ownership"</dmn:text>
+          <dmn:text>"Individual - Permanent Resident or Citizen"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_B4F20C12-E21F-434C-A230-786AE7BDA75A">
-          <dmn:text>"ELM"</dmn:text>
+          <dmn:text>"Test2"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_3A04BF18-755D-4C92-8E8C-8775739AF8F0">
-        <dmn:description>Restricted Lodgement</dmn:description>
         <dmn:inputEntry id="_F95849DB-7CFA-45FB-AAB2-26B7AF401360">
-          <dmn:text>"Transfer of land use entitlement"</dmn:text>
+          <dmn:text>"Individual - Foreign"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_AC312769-F19F-4D47-AA2C-093966164BCD">
-          <dmn:text>"ELM"</dmn:text>
+          <dmn:text>"4"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
       <dmn:rule id="_4D5C5E55-F9B1-4079-8071-E2DAE35C137C">
         <dmn:inputEntry id="_A8ADA272-8AD2-424D-AF76-40BCEB846B25">
-          <dmn:text>"Transfer of Land"</dmn:text>
+          <dmn:text>"Company"</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_24E5917C-46F1-4223-BD00-07284971133F">
-          <dmn:text>"Test2"</dmn:text>
+          <dmn:text>"5"</dmn:text>
         </dmn:outputEntry>
       </dmn:rule>
     </dmn:decisionTable>
