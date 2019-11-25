@@ -8,7 +8,7 @@
     <dmn:itemComponent id="_D17BFF02-2B1C-4A17-9D6C-F28EC541B89B" name="purchaserType" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_004C7225-1F22-4E31-84CC-5976CE9185F0" name="concessionType" isCollection="false">
+    <dmn:itemComponent id="_004C7225-1F22-4E31-84CC-5976CE9185F0" name="transactionType" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
