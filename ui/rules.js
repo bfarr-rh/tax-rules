@@ -31,10 +31,9 @@ function buildKnockoutRuleObj() {
               "insert": {
                 "object": {
                     "org.kie.example.traffic.traffic_violation.FormData": {
-                        "propertyDetails" : "",
-                        "transactionDetails" : "",
-                        "concessionType" : "",
-                        "transferees" : ""
+                        "purchaserType" : "",
+                        "transactionType" : "",
+                        "purchasePrice" : ""
                     }
                 }
             }
@@ -57,11 +56,9 @@ function buildKnockoutRuleObj() {
         
     var knockoutRuleObject = JSON.parse(text);
     //alert(JSON.stringify(knockoutRuleObject));
-    //alert( knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].propertyDetails);
-    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].propertyDetails = $('#propertyDetailsSelect').val();
-    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].transactionDetails = $('#transactionDetailsSelect').val();
-    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].concessionType = $('#concessionTypeSelect').val();
-    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].transferees = $('#transfereesInput').val();
+    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].purchaserType = $('#purchaserTypeSelect').val();
+    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].transactionType = $('#transactionTypeSelect').val();
+    knockoutRuleObject.commands[0].insert.object["org.kie.example.traffic.traffic_violation.FormData"].purchasePrice = $('#purchasePriceInput').val();
 
     $('#step1_json').val(JSON.stringify(knockoutRuleObject));
 };

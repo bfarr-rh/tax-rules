@@ -33,7 +33,7 @@
 
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-5912 node-type-task">
   <div class="page-header">
-    <h1>Example Form to drive Decision Manager</h1>
+    <h1>Tax Rules</h1>
   </div>
   <main id="main" role="main" accesskey="S">
     <div class="container " id="two-columns">
@@ -45,14 +45,14 @@
           <div id="tabs">
             <ul>
               <li><a href="#tabs-1">Setup</a></li>
-              <li><a href="#tabs-2">Knockout Rule</a></li>
+              <li><a href="#tabs-2">Tax Rule</a></li>
             </ul>
             <div id="tabs-1">
               <p>To run this page you may need to enable CORS for the kie server
                 https://access.redhat.com/solutions/4036301 </p>
 
-              <div><label>Version of Knockout Rule Service {containerId} will be replaced in urls: </label>
-                <input id="containerid" type="text" size="50" value="KnockoutRulesExample_1.1.1" />
+              <div><label>Version of Rule Service {containerId} will be replaced in urls: </label>
+                <input id="containerid" type="text" size="50" value="TaxRules_1.1.2" />
               </div>
               <div style="margin-top:5px"><label>User name KIE Rest API :</label>
                 <input id="username1" type="text" size="50" value="rhdmAdmin" />
@@ -62,40 +62,24 @@
               </div>
             </div>
             <div id="tabs-2">
-              <div><label>Property Details:</label>
-                <select id="propertyDetailsSelect" name="propertyDetails">
+              <div><label>Purchaser Type:</label>
+                <select id="purchaserTypeSelect" name="purchaserType">
                   <option value=""></option>
-                  <option value="Change in beneficial ownership">Change in beneficial ownership</option>
-                  <option value="Transfer of land use entitlement">Transfer of land use entitlement</option>
-                  <option value="Transfer of Land">Transfer of Land</option>
+                  <option value="Individual - Permanent Resident or Citizen">Individual - Permanent Resident or Citizen</option>
+                  <option value="Individual - Foreign">Individual - Foreign</option>
+                  <option value="Company">Company</option>
                 </select>
               </div>
-              <div><label>Transaction Details:</label>
-                <select id="transactionDetailsSelect" name="transactionDetails">
+              <div><label>Transaction Type:</label>
+                <select id="transactionTypeSelect" name="transactionType">
                   <option value=""></option>
-                  <option value="Devise in accordance with a will or probate">Devise in accordance with a will or
-                    probate</option>
-                  <option value="Other">Other</option>
-                  <option value="Change in the manner of holding in equal shares">Change in the manner of holding in
-                    equal shares</option>
-                  <option value="Transfer between spouses, defacto or domestic partner">Transfer between spouses,
-                    defacto or domestic partner</option>
+                  <option value="Transfer between spouses, defacto or domestic partner">Transfer between spouses, defacto or domestic partner</option>
+                  <option value="Principal Place of Residence">Principal Place of Residence</option>
+                  <option value="Investment">Investment</option>
                 </select>
               </div>
-              <div><label>Concession Type:</label>
-                <select id="concessionTypeSelect" name="concessionType">
-                  <option value=""></option>
-                  <option value="Conversion of land use entitlement">Conversion of land use entitlement</option>
-                  <option value="Shariah financing">Shariah financing</option>
-                  <option value="Young Farmer exemption of concession">Young Farmer exemption of concession</option>
-                  <option value="Change in manner of holding">Change in manner of holding</option>
-                  <option value="Transfer between spouses or domestic Partner - Love and affection">Transfer between spouses or domestic Partner - Love and affection</option>
-                  <option value="Transfer between spouses or domestic Partner - breakdown of relationship">Transfer between spouses or domestic Partner - breakdown of relationship</option>
-                </select>
-              </div>
-              <div><label>Number of Transferees:</label>
-                <input id="transfereesInput" name="transferees" value="" size="3" maxlength="2" />
-
+              <div><label>Purchase Price:</label>
+                  <input id="purchasePriceInput" name="purhcasePrice" size="10">
               </div>
               <br />
               <div>
@@ -104,7 +88,7 @@
               <br />
               <div>
                   <br/>
-                <label>Result:</label>
+                <label>Tax rate on Purchase:</label>
                 <span id="step1_result"></span>
                 <br/>
               </div>
@@ -123,12 +107,6 @@
                     <p><label>Received</label></p>
                     <p><textarea id="step1_jsonresult" rows="7" cols="60">
                     </textarea></p>
-                  </div>
-                  <div>
-                      <p><label>Ruleflow Diagram</label></p>
-                      <p>
-                        <img src="images/KnockOutRules.bpmn.jpg" height="289" width="667"/>
-                      </p>
                   </div>
               </div>
 
