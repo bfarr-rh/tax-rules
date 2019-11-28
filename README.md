@@ -11,22 +11,28 @@ Business Input
 
 3 Spreadsheet inputs have been mapped to form the knockout style rules. Knockout rules meaning only execute the logic thats needed before returning a result. 
 
-Test 1 - Puchaser Type Test	
-Purchaser Type	                                        Land Tax
-Individual - Permanent Resident or Citizen	            Go to test 2
-Individual - Foreign	                                  4%
-Company	                                                5%
+Test 1 Puchaser Type Test
 
-Test 2 - Transaction type	
-Transaction Type	                                      Land Tax
-Transfer between spouses, defacto or domestic partner	  0%
-Principal Place of Residence	                          1%
-Investment	                                            Go to Test 3
+|Purchaser Type | Land Tax|
+|--- | --- |
+|Individual - Permanent Resident or Citizen	        |    Go to test 2|
+|Individual - Foreign	                                |  4%|
+|Company	                                               | 5%|
 
-Test 3 - Purchase Price	
-Price	                                                  Land Tax
-<500,000	                                              2%
-500,000+	                                              3%
+Test 2 Transaction type	
+
+|Transaction Type | Land Tax
+|--- | --- 
+|Transfer between spouses, defacto or domestic partner	 | 0%
+|Principal Place of Residence	                         | 1%
+|Investment	                                          |  Go to Test 3
+
+Test 3 Purchase Price	
+
+|Price | Land Tax
+|--- | --- 
+|<500,000	                                            |  2%
+|500,000+	                                            |  3%
 
 Knockout Tax Rule Implementation
 ================================
