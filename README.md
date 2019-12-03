@@ -1,3 +1,10 @@
+Video Walkthrough
+=================
+
+A walkthrough of this solution.
+https://www.youtube.com/watch?v=-CtjlUXEaKg 
+
+
 Business Problem
 ================
 
