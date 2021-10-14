@@ -1,6 +1,16 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <configuration>
+    <property key="org.kie.dmn.runtime.listeners.mylistener" value="scot.dagda.vrm8890RuleSupport.DMNLogger"/>
+  </configuration>
   <kbase name="myKBase" default="true" eventProcessingMode="stream" equalsBehavior="identity">
-    <ksession name="myStatelessSession" type="stateless" default="true" clockType="realtime"/>
+    <ksession name="myStatelessSession" type="stateless" default="true" clockType="realtime">
+      <listeners>
+        <ruleRuntimeEventListener type="scot.dagda.vrm8890RuleSupport.CustomRuleRuntimeEventListener"/>
+        <agendaEventListener type="scot.dagda.vrm8890RuleSupport.RuleLogger"/>
+        <!-- <agendaEventListener type="org.domain.SecondAgendaListener"/> -->
+        <processEventListener type="scot.dagda.vrm8890RuleSupport.CustomProcessEventListener"/>
+      </listeners>
+    </ksession>
     <ksession name="myStatefulSession" type="stateful" default="false" clockType="realtime">
       <listeners>
         <ruleRuntimeEventListener type="org.kie.api.event.rule.DebugRuleRuntimeEventListener"/>
